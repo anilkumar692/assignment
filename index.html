@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vxCreativ - Creative solutions for your business.">
+    <title>Home Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: 1s linear;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:#17165a;
+            padding: 1rem;
+        }
+
+        .navbar-brand img {
+            height: 40px; 
+            width: auto; 
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar-item {
+            margin-left: 1rem;
+        }
+
+        .navbar-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-link:hover {
+            background-color: #555;
+        }
+
+        /* Mobile Toggle Button */
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #17165a;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 999;
+                transition: 1s linear;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-item {
+                margin: 0;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .navbar-toggle {
+                display: flex;
+            }
+        }
+
+        /* Icon Styling */
+        .navbar-link i {
+            margin-right: 5px;
+        }
+
+
+
+        .image-text-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-image: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-wrap: wrap;
+        }
+
+        /* Image Container */
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Rotating Image */
+        .rotating-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            animation: rotate 25s linear infinite;
+        }
+
+        /* Text Container */
+        .text-container {
+            flex: 1;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        /* Heading */
+        .text-container h3 {
+            font-size: 3rem;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Changing Text (on a separate line) */
+        .changing-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* Changing Text Animation */
+        .changing-text::after {
+            content: "Web Development.";
+            animation: textChange 6s infinite;
+        }
+
+        /* Animation Keyframes */
+        @keyframes textChange {
+            0%, 25% {
+                content: "Web Development.";
+            }
+            26%, 50% {
+                content: "Social Media.";
+            }
+            51%, 75% {
+                content: "Local SEO.";
+            }
+            76%, 100% {
+                content: "SEO.";
+            }
+        }
+
+        /* Custom Button */
+        .custom-button {
+            padding: 6px 21px;
+            background-color: #cc5c2c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-text-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .image-container, .text-container {
+                flex: none;
+                width: 100%;
+            }
+
+            .rotating-image {
+                max-width: 250px;
+            }
+            
+            .text-container {
+                padding: 15px;
+            }
+        }
+
+        /* Rotating Animation */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+/* *************************************************************************** */
+.clients-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    background: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-size: 28px;
+    color: #17165a;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.clients-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.category-row {
+    display: flex;
+    align-items: center;
+    gap: 55px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    min-width: 180px; 
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.category-row img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-row img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .category-row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px; 
+    }
+
+    .category-row img {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-row {
+        flex-direction: column;
+        align-items: center; /* Centers images properly */
+        text-align: center;
+    }
+
+    .category-label {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .category-row img {
+        max-width: 100%;
+    }
+}
+
+
+
+/* *************************************************************************************************************** */
+/* Container for all pricing cards */
+.pricing-container {
+    justify-content: space-between;
+    background-image: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.pricing-column {
+    width: 30%;  /* Adjusted width to fit better */
+    min-width: 280px;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.custom-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.card-body h3 {
+    font-family: "Cambria Math", sans-serif;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.digital-para {
+    font-family: "Cambria Math", sans-serif;
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.custom-btn {
+    background-color: #cc5c2c;
+    color: #ffffff;
+    font-size: 1rem;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .pricing-column {
+        width: 45%;  
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-column {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-column {
+        width: 100%;  
+    }
+}
+
+
+/* Why Choose Us Section */
+.why-choose-container {
+    background-image: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+    background-size: cover;
+    background-position: center;
+    /* max-width: 100%; */
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.why-choose-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side: Image Box */
+.why-choose-image {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.why-choose-image h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.why-choose-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Right Side: Text Content */
+.why-choose-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.why-choose-text p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.why-choose-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-text li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #cc5c2c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .why-choose-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-choose-image, .why-choose-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-container {
+        padding: 30px 5px;
+    }
+}
+
+
+
+
+.digital-marketing-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px; 
+    border-radius: 10px;
+    flex-wrap: wrap;
+    /* max-width: 1200px;  */
+    margin: 0 auto; 
+}
+
+.text-box {
+    flex: 1;
+    max-width: 50%;
+    padding: 15px;
+  
+}
+
+.text-box h2 {
+    font-size: 1.8rem; 
+    color: #cc5c2c;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 0.95rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.text-box ul {
+    list-style-type: disc;
+    padding-left: 15px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.image-box {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.image-box img {
+    width: 90%;
+    max-width: 400px; 
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .digital-marketing-container {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .text-box, .image-box {
+        max-width: 100%;
+    }
+}
+
+/* ******************************************************************************************************************************** */
+
+.case-studies-page {
+    background: url('https://www.yocreativ.com/images/backgroundImg1.jpeg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.case-studies-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.case-studies-left {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.case-studies-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.case-study-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+/* Right Section */
+.case-studies-right {
+    flex: 2;
+    padding: 20px;
+}
+
+/* Header with Image & Text */
+.case-study-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.shadanga-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.case-study-header h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.case-study-header p {
+    font-size: 16px;
+    margin: 0;
+    color: gray;
+}
+
+/* Description */
+.case-study-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Circles */
+.case-study-circles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: #ff9933;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Button */
+.case-study-button {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background: #ff9933;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.case-study-button:hover {
+    background: #e07d00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .case-studies-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .case-study-header {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .case-studies-left,
+    .case-studies-right {
+        width: 100%;
+    }
+
+    .case-study-circles {
+        flex-wrap: wrap;
+    }
+
+    .circle {
+        margin: 5px;
+    }
+}
+
+
+/* ***************************************************************************************************************************************** */
+
+
+/* Page Container */
+.achievements-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+    background: #fff;
+}
+
+/* Main Container */
+.achievements-container {
+    max-width: 1200px;
+    
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading */
+.achievements-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Paragraphs */
+.achievements-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ /* Achievement Boxes  */
+.achievement-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Individual Achievement Box */
+.achievement-box {
+    flex: 1;  /* Equal width */
+    min-width: 250px;
+    max-width: 260px;
+    padding: 20px;
+    background: #fff;
+    border-top: 7px solid #ff9933;
+    border-bottom: 7px solid #ff9933;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.achievement-box:nth-child(2){
+    border-top: 7px solid #007aff;
+    border-bottom: 7px solid #007aff;
+
+
+
+}
+.achievement-box:nth-child(3){
+    border-top: 7px solid #d63384;;
+    border-bottom: 7px solid #d63384;;
+    
+
+    
+}
+.achievement-box:nth-child(4){
+    
+    border-top: 7px solid #6f42c1;
+    border-bottom: 7px solid #6f42c1;
+    
+}
+
+/* Titles inside boxes */
+.achievement-box h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+/* Descriptions inside boxes */
+.achievement-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+    .achievement-boxes {
+        justify-content: center;
+        gap: 20px;
+    }
+    .achievement-box {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 767px) {
+    .achievement-box {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.who-we-are-container {
+    display: flex;
+    background: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 1200px;  */
+    margin: 0 auto; 
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.who-we-are-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    color: #000000; 
+}
+
+.who-we-are-text h2 {
+    font-size: 2rem;
+    color: #cc5c2c; 
+    margin-bottom: 10px;
+}
+
+.who-we-are-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.who-we-are-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.who-we-are-image img {
+    width: 90%; 
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .who-we-are-container {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .who-we-are-text, .who-we-are-image {
+        max-width: 100%;
+    }
+
+    .who-we-are-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+
+/* ************************************************************************************************************************************************************************ */
+.accordion {
+            width: 90%;
+            max-width: 500px;
+        }
+        .accordion-item {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .accordion-item::before {
+            content: '\25B6'; 
+            color: white;
+            background: black;
+            padding: 5px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        .accordion-content {
+            display: none;
+            margin-left: 25px;
+            color: #333;
+        }
+        .accordion-item:hover .accordion-content {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .accordion {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+
+
+
+
+/* *********************************************************************************************************** */
+.faqcontainer{ 
+    background: url('https://www.yocreativ.com/images/backgroundImg1.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.container {
+            max-width: 1200px;
+            margin:  auto;
+            padding: 50px 0px;
+           
+        }
+        .faq-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        details {
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        summary {
+            background-color: #cc5c2c;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        summary::before {
+            content: '\25B6'; 
+            color: black;
+            margin-right: 10px;
+        }
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+        details p {
+            background-color: white;
+            color: black;
+            padding: 15px;
+            margin: 0;
+        }
+
+
+
+
+ /* ************************************************************************************************************        */
+ .footer {
+      background: url('https://www.dronainfotech.com/wp-content/themes/dronainfotech/images/footer-bg.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 40px 0;
+    }
+  
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+  
+    .footer-section {
+      flex: 1;
+      margin: 10px;
+      min-width: 200px;
+    }
+  
+    .footer-section h4 {
+      color: #cc5c2c;
+      margin-bottom: 15px;
+    }
+  
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .footer-section ul li {
+        list-style-type: circle;
+      margin: 8px 0;
+    }
+  
+    .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    .footer-section p, .footer-section a {
+      font-size: 14px;
+      color: white;
+    }
+  
+    .footer-section form input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+    }
+  
+    .footer-section form button {
+      background-color: #cc5c2c;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  
+    .footer-section form button:hover {
+      background-color: #a44a24;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="https://www.yocreativ.com/images/lgg.png" alt="vxCreativ Logo">
+        </div>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li class="navbar-item"><a href="index.html" class="navbar-link"><i class="fas fa-home"></i> Home</a></li>
+            <li class="navbar-item"><a href="about.html" class="navbar-link"><i class="fas fa-user"></i> About Us</a></li>
+            <li class="navbar-item"><a href="services.html" class="navbar-link"><i class="fas fa-cogs"></i> Services</a></li>
+            <li class="navbar-item"><a href="blog.html" class="navbar-link">Blog</a></li> 
+            <li class="navbar-item"><a href="contact.html" class="navbar-link"><i class="fas fa-phone"></i> Contact</a></li> 
+        </ul>
+    </nav>
+
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="image-text-section">
+    <div class="image-container">
+        <img src="https://www.yocreativ.com/images/main_img_for_yocreativ.png" class="rotating-image" alt="Main Image">
+    </div>
+    <div class="text-container">
+        <h3>
+            <span>Turning Ideas into</span>
+            <span>Digital Success with</span>
+            <span class="changing-text"></span>
+        </h3>
+        <button class="custom-button">Get In Touch</button>
+    </div>
+</div>
+
+  <!-- ************************************************************************************************************************** -->
+
+  <div class="clients-section">
+    <h2>Our Clients</h2>
+    <p>From Start-Ups To Fortune 500 Companies, our clients are succeeding online.</p>
+
+    <div class="clients-grid">
+        <div class="category-row">
+            <div class="category-label">Brand:</div>
+            <img src="https://www.yocreativ.com/ourClient/appughar.png" alt="Appu Ghar">
+            <img src="https://www.yocreativ.com/ourClient/AmazonIndia.png" alt="Amazon India">
+            <img src="https://www.yocreativ.com/ourClient/Britannia.png" alt="Britannia">
+            <img src="https://www.yocreativ.com/ourClient/Britannia.png" alt="Britannia">
+        </div>
+
+        <div class="category-row">
+            <div class="category-label">International:</div>
+            <img src="https://www.yocreativ.com/ourClient/Stance.png" alt="Stance">
+            <img src="https://www.yocreativ.com/ourClient/6.png" alt="Client 6">
+            <img src="https://www.yocreativ.com/ourClient/eglo.png" alt="Eglo">
+            <img src="https://www.yocreativ.com/ourClient/8.png" alt="Client 8">
+        </div>
+
+        <div class="category-row">
+            <div class="category-label">E-Commerce:</div>
+            <img src="https://www.yocreativ.com/ourClient/Ap2V.png" alt="Ap2V">
+            <img src="https://www.yocreativ.com/ourClient/10.png" alt="Client 10">
+            <img src="https://www.yocreativ.com/ourClient/wavestory.png" alt="Wave Story">
+            <img src="https://www.yocreativ.com/ourClient/12.png" alt="Client 12">
+        </div>
+
+        <div class="category-row">
+            <div class="category-label">B2B & Technology:</div>
+            <img src="https://www.yocreativ.com/ourClient/13.png" alt="Client 13">
+            <img src="https://www.yocreativ.com/ourClient/econtrol.png" alt="E-Control">
+            <img src="https://www.yocreativ.com/ourClient/15.png" alt="Client 15">
+            <img src="https://www.yocreativ.com/ourClient/RRPL.png" alt="RRPL">
+        </div>
+    </div>
+</div>
+
+
+<!-- ********************************************************************************************************************************** -->
+<div class="pricing-container">
+    <div class="pricing-column">
+        <div class="custom-card">
+            <div class="card-header">
+                <img width="60" height="60" src="https://www.yocreativ.com/images/website-icons/web-development.png" alt="Website Development">
+            </div>
+            <div class="card-body">
+                <h3>Website Development</h3>
+                <p class="digital-para">We design and develop websites of all scales and functions to represent your brand digitally.</p>
+                <a href="website-development.html">
+                    <button class="custom-btn">UPGRADE YOUR DESIGN</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pricing-column">
+        <div class="custom-card">
+            <div class="card-header">
+                <img width="60" height="60" src="https://www.yocreativ.com/images/website-icons/seo.png" alt="SEO Services">
+            </div>
+            <div class="card-body">
+                <h3>Search Engine Optimization</h3>
+                <p class="digital-para">YoCreativ is the best SEO company in Gurgaon that provides world-class SEO services for your business.</p>
+                <a href="seo-services.html">
+                    <button class="custom-btn">BOOST YOUR SEO</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-column">
+        <div class="custom-card">
+            <div class="card-header">
+                <img width="60" height="60" src="https://www.yocreativ.com/images/website-icons/local-seo.png" alt="Digital Marketing">
+            </div>
+            <div class="card-body">
+                <h3>Local SEO Service</h3>
+                <p class="digital-para">YoCreativ is the best SEO company in Gurgaon that provides world-class SEO services for your business.</p>
+                <a href="digital-marketing.html">
+                    <button class="custom-btn">GROW LOCAL</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-column">
+        <div class="custom-card">
+            <div class="card-header">
+                <img width="60" height="60" src="https://www.yocreativ.com/images/website-icons/social-media.png" alt="Branding">
+            </div>
+            <div class="card-body">
+                <h3>Social Media Marketing</h3>
+                <p class="digital-para">Boost Your Brand: Dive into Social Media Marketing Now for Enhanced Visibility and Engagement.</p>
+                <a href="branding.html">
+                    <button class="custom-btn">GROW SOCIAL</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-column">
+        <div class="custom-card">
+            <div class="card-header">
+                <img width="60" height="60" src="https://www.yocreativ.com/images/website-icons/e-commerce-seo.png" alt="Content Writing">
+            </div>
+            <div class="card-body">
+                <h3>E-Commerce SEO</h3>
+                <p class="digital-para">Get ready for a big boost in organic video views, engagement metrics, and subscription numbers.</p>
+                <a href="content-writing.html">
+                    <button class="custom-btn">GROW YOUR SALE</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="why-choose-container">
+    <div class="why-choose-content">
+        <!-- Left Side: Image Box -->
+        <div class="why-choose-image">
+            <h2>Why Choose Us</h2>
+            <img src="https://www.yocreativ.com/images/why-choose-uss.jpg" alt="Why Choose Us">
+        </div>
+
+       
+        <div class="why-choose-text">
+            <p>
+                At Yocreativ, we don't just help you market your brand—we work with you to grow it. 
+                We understand that every business is unique, so we create tailored strategies to 
+                help you reach your specific goals. From building brand awareness to driving 
+                conversions, we’re here to deliver real, measurable results.
+            </p>
+            <ul>
+                <li><strong>01.</strong> Custom Plans</li>
+                <li><strong>02.</strong> Experienced Team</li>
+                <li><strong>03.</strong> Focused on Results</li>
+                <li><strong>04.</strong> Latest Tools</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="digital-marketing-container">
+    <div class="text-box">
+        <h2>Why Does Your Brand Need a Digital Marketing Agency?</h2>
+        <p>In today’s digital world, a strong online presence is essential. Navigating web development, SEO, social media, and online ads can be overwhelming, but a digital marketing agency simplifies it for you.</p>
+        <ul>
+            <li>Hiring experts lets you focus on running your business while they manage your brand’s website, boost search rankings, create engaging content, and track evolving trends.</li>
+            <li>From building user-friendly websites to driving growth through strategic marketing, a professional team ensures better engagement, faster growth, and higher sales.</li>
+            <li>Would you rather master it all yourself or trust the experts who live and breathe digital success?</li>
+        </ul>
+    </div>
+    <div class="image-box">
+        <img src="https://www.yocreativ.com/images/our-achievements.gif" alt="Our Achievements">
+    </div>
+</div>
+
+
+
+
+
+<div class="case-studies-page">
+    <div class="case-studies-container">
+        <div class="case-studies-left">
+            <h2 class="case-studies-heading">Case Studies</h2>
+            <img src="https://yocreativ.com/images/shadanga-case-study.jpeg" alt="Case Study Image" class="case-study-image">
+        </div>
+        <div class="case-studies-right">
+            <div class="case-study-header">
+                <img src="https://yocreativ.com/images/shadanga.jpg" alt="Shadanga Logo" class="shadanga-logo">
+                <div>
+                    <h3>Shadanga - Kerala Ayurveda</h3>
+                    <p>Ayurveda Clinic Center in Gurgaon – Shadanga</p>
+                </div>
+            </div>
+            <p class="case-study-description">
+                In collaboration with Yocreativ, Shadanga Kerala Ayurveda Clinic overcame challenges of low online 
+                visibility and modern medicine dominance. Yocreativ's SEO optimization, targeted social media campaigns, 
+                and lead generation tactics bolstered the clinic's growth. The results? A substantial surge in website 
+                traffic, higher conversion rates, and enhanced online prominence. This partnership has transformed the 
+                clinic's reputation and reinforced its position as a leading Ayurveda healing center.
+            </p>
+            <div class="case-study-circles">
+                <div class="circle">+169%
+                    Non-Brand
+                    Clicks</div>
+                <div class="circle">+111%
+                    Organic New Users</div>
+                <div class="circle">1000+
+                    Keywords
+                    Ranked</div>
+            </div>
+            <button class="case-study-button">View Case Study</button>
+        </div>
+    </div>
+</div>
+
+<!-- ************************************************************************************************************************************************************************ -->
+
+
+    <div class="achievements-page">
+        <div class="achievements-container">
+            <h2 class="achievements-heading">Our Achievements</h2>
+            <p class="achievements-description">
+                At YoCreativ, we're not just about providing services; we're about helping businesses thrive in the digital world. 
+                Whether you need SEO, web design, or a complete digital marketing strategy, we're here to help. Our goal? To deliver 
+                results that really matter - whether that's more traffic, higher rankings, or real growth you can see.
+            </p>
+            <p class="achievements-description">
+                We know it can be very difficult to navigate the digital landscape. That's why we explain it for you step by step. 
+                Need to improve your Google rankings? No problem, our SEO team is working on it. Want a website that not only looks 
+                great but also functions smoothly? We've got that covered, too. And when it comes to digital marketing, we don't just 
+                run campaigns - we create strategies based on your business, your goals, and your audience.
+            </p>
+            <p class="achievements-description">
+                Working with a top SEO company in Gurgaon like YoCreativ means you're not just another project on a to-do list. 
+                We care about your success. We dig deep to understand what makes your business unique and how we can amplify that online.
+            </p>
+            <p class="achievements-description">
+                So, if you’re looking for a partner to help grow your online presence, let’s connect. You’ll be surprised at what we can achieve together. 
+                Give us a call—let’s turn your digital dreams into reality!
+            </p>
+
+            <!-- Achievement Boxes -->
+            <div class="achievement-boxes">
+                <div class="achievement-box">
+                    <h3>750+</h3>
+                    <p>Completed Projects</p>
+                </div>
+                <div class="achievement-box">
+                    <h3>300+</h3>
+                    <p>Satisfied clients</p>
+                </div>
+                <div class="achievement-box">
+                    <h3>100+</h3>
+                    <p>5 Star Google Rating</p>
+                </div>
+                <div class="achievement-box">
+                    <h3>2350+</h3>
+                    <p>Keywords On Top Ranking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="who-we-are-container">
+    <div class="who-we-are-text">
+        <h2>Who We Are</h2>
+        <p>In 2017, YoCreativ was born out of a simple idea: to provide reliable, effective digital solutions. Founded by Yatinder Kataria, an IIM Lucknow alumnus, with a strong engineering background from NIT Jaipur (MNIT), our journey began with website development. Frustrated with the lack of reliable services, we built a company that truly listens to clients’ needs.</p>
+        <p>From those humble beginnings, we expanded into digital marketing and discovered our strength in SEO. Today, YoCreativ is one of the most trusted names in Gurgaon for businesses looking to grow online.</p>
+        <p>We understand your challenges because we’ve faced them too. That’s why we’re committed to delivering results, not just promises. When you choose YoCreativ, you’re choosing a team that works with you, for you.</p>
+    </div>
+    <div class="who-we-are-image">
+        <img src="https://www.yocreativ.com/images/who-we-are.jpeg" alt="Who We Are">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- ************************************************************************************************************************** -->
+ <div class="faqcontainer">
+    <div class="container">
+        <h3 class="faq-title">F.A.Q</h3>
+        <section>
+            <details>
+                <summary>What digital marketing services do you offer?</summary>
+                <p>We offer SEO, website development, PPC advertising, social media marketing, content marketing, and more.</p>
+            </details>
+            <details>
+                <summary>How can digital marketing benefit my business?</summary>
+                <p>Digital marketing increases brand visibility, drives traffic, generates leads, and boosts conversions.</p>
+            </details>
+            <details>
+                <summary>What sets your agency apart from others?</summary>
+                <p>We offer expertise, data-driven strategies, personalized solutions, and measurable results.</p>
+            </details>
+            <details>
+                <summary>How do you measure the success of digital marketing campaigns?</summary>
+                <p>We track KPIs like website traffic, conversion rates, engagement, and return on ad spend.</p>
+            </details>
+            <details>
+                <summary>Do you work with businesses of all sizes?</summary>
+                <p>Yes, we work with startups, small businesses, and large enterprises.</p>
+            </details>
+            <details>
+                <summary>How do I get started with your agency?</summary>
+                <p>Contact us via our form or phone to discuss your goals and get a tailored strategy.</p>
+            </details>
+        </section>
+    </div>
+    
+    
+
+ </div>
+
+<!-- ****************************************************************************************************************************************** -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Home</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#">Search Engine Optimization</a></li>
+          <li><a href="#">Local SEO</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Social Media Marketing</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Call Us Today</h4>
+        <p>📞 +91 85275 05252</p>
+        <p>📞 +91 99101 06678</p>
+        <p>📞 0124 428 4797</p>
+        <p>📧 <a href="mailto:yatinder.kataria@yocreativ.com">yatinder.kataria@yocreativ.com</a></p>
+        <p>📍 1760, Sector-45, Gurgaon – 122002, Haryana</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
